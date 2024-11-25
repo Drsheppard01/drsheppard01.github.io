@@ -7,9 +7,9 @@ export const defaultConfig: ThemeConfig = {
   site: {
     title: '活版印字',
     subtitle: 'Typography',
-    author: 'Moeyua',
+    author: 'DrSheppard01',
     description: 'Rediscory the beauty of typography',
-    website: 'https://astro-theme-typography.vercel.app/',
+    website: 'https://github.com/Drsheppard01/drsheppard01.github.io',
     pageSize: 5,
     socialLinks: [
       {
@@ -56,7 +56,6 @@ export const defaultConfig: ThemeConfig = {
   },
   appearance: {
     theme: 'light',
-    locale: 'zh-cn',
     colorsLight: {
       primary: '#2e405b',
       background: '#ffffff',
@@ -78,13 +77,6 @@ export const defaultConfig: ThemeConfig = {
   },
   rss: {
     fullText: true,
-  },
-  comment: {
-    // disqus: { shortname: "typography-astro" },
-  },
-  analytics: {
-    googleAnalyticsId: '',
-    umamiAnalyticsId: '',
   },
   latex: {
     katex: false,

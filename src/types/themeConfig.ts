@@ -8,7 +8,6 @@ import type {
   Repo,
   Theme,
 } from 'giscus'
-import type { LANGUAGES } from '../i18n.ts'
 
 export type DeepPartial<T> = {
   [P in keyof T]?: T[P] extends object ? DeepPartial<T[P]> : T[P];
@@ -18,9 +17,7 @@ export interface ThemeConfig {
   site: ConfigSite
   appearance: ConfigAppearance
   seo: ConfigSEO
-  comment: Partial<ConfigComment>
   rss: ConfigRSS
-  analytics: ConfigAnalytics
   latex: ConfigLaTeX
 }
 
@@ -41,7 +38,6 @@ export interface ConfigSite {
 
 export interface ConfigAppearance {
   theme: 'light' | 'dark'
-  locale: keyof typeof LANGUAGES
   colorsDark: Colors
   colorsLight: Colors
   fonts: Fonts
@@ -53,22 +49,10 @@ export interface ConfigSEO {
   link: Partial<Link>[]
 }
 
-export interface ConfigComment {
-  disqus: Disqus
-  giscus: Giscus
-  twikoo: Twikoo
-}
-
 export interface ConfigRSS {
   fullText?: boolean
   /** https://github.com/RSSNext/follow */
   follow?: { feedId: string, userId: string }
-}
-
-export interface ConfigAnalytics {
-  /** google analytics */
-  googleAnalyticsId: string
-  umamiAnalyticsId: string
 }
 
 export interface ConfigLaTeX {
@@ -86,30 +70,4 @@ interface Fonts {
   // TODO: 未实现
   _article?: string
   _code?: string
-}
-
-interface Twikoo {
-  envId: string
-  region?: string
-  lang?: string
-}
-
-interface Disqus {
-  shortname: string
-}
-
-interface Giscus {
-  repo: Repo
-  repoId?: string
-  category?: string
-  categoryId?: string
-  mapping?: Mapping
-  term?: string
-  strict: BooleanString
-  reactionsEnabled: BooleanString
-  emitMetadata: BooleanString
-  inputPosition: InputPosition
-  theme: Theme
-  lang: AvailableLanguage
-  loading: Loading
 }
