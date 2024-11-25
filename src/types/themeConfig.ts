@@ -1,6 +1,5 @@
 import type { Link, Meta } from 'astro-seo'
 import type {
-  AvailableLanguage,
   BooleanString,
   InputPosition,
   Loading,
