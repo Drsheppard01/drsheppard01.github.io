@@ -1,6 +1,6 @@
 +++
 title = "Distro of the year."
-date = "2024-06-12"
+date = "2024-12-25"
 description = "Top best Linux distributions that might impress you"
 [taxonomies]
 tags = ["Linux", "Windows", "Linux Desktop"]
