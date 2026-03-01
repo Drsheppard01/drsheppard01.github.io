@@ -1,6 +1,6 @@
 # The URL the site will be built for
 base_url = "https://drsheppard01.github.io/"
-theme = "kita"
+theme = "austere"
 
 # The site title and description; used in feeds by default.
 title = "Dr. Sheppard's blog"
@@ -21,23 +21,51 @@ feed_filenames = ["rss.xml"]
 
 taxonomies = [{ name = "tags", rss = true, paginate_by = 5 }]
 
+[search]
+# Required for search page to work.
+index_format = "fuse_javascript"
 
-# Whether to automatically compile all Sass files in the sass directory
-compile_sass = true
+[slugify]
+# Controls slugification for page/section URLs.
+paths = "on"
+# Controls slugification for taxonomy terms (tags, categories, etc.).
+taxonomies = "on"
+# Controls slugification for heading anchors (H1 to H6 etc.).
+anchors = "on"
 
-# Whether to build a search index to be used later on by a JavaScript library
-build_search_index = false
-
-[markdown]
-# Whether to do syntax highlighting
-# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
-highlight_code = true
 
 [extra]
 # Put all your custom variables here
+
+menu_links = [
+  { url = "$BASE_URL/", name = "Home" },
+  { url = "$BASE_URL/posts/", name = "Posts" },
+  { url = "$BASE_URL/about/", name = "About" },
+  { url = "$BASE_URL/projects/", name = "Projects" },
+  { url = "$BASE_URL/tags/", name = "Tags" },
+  { url = "$BASE_URL/search/", name = "Search" },
+]
 
 # The page footer options.
 [extra.footer]
 since = 2024
 license = "CC BY-SA 1.0"
 license_url = "https://creativecommons.org/licenses/by-sa/1.0/deed"
+
+[extra.colours.light]
+background = "#FAF7F2"
+text = "#1a1a1a"
+text_muted = "#3a3a3a"
+accent = "#9E4440"
+accent_hover = "#7A3533"
+code_bg = "#f0ebe3"
+border = "#e0d9ce"
+# Dark colours.
+[extra.colours.dark]
+background = "#141413"
+text = "#e8e8e8"
+text_muted = "#a0a0a0"
+accent = "#E07A5F"
+accent_hover = "#F4A594"
+code_bg = "#1e1e1d"
+border = "#2a2a29"
