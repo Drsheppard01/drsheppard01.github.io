@@ -1,6 +1,3 @@
-[submodule "themes/kita"]
-	path = themes/kita
-	url = https://github.com/st1020/kita.git
-[submodule "myblog/themes/kita"]
-	path = myblog/themes/kita
-	url = https://github.com/st1020/kita.git
+[submodule "themes/austere-theme-zola"]
+	path = themes/austere-theme-zola
+	url = https://github.com/tomwrw/austere-theme-zola
