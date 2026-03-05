@@ -6,7 +6,7 @@ description = "Cuz reddit comment doesn't accept it"
 tags = ["Linux", "AppImage", "Flatpak", "Snap", "Containers", "Linux Desktop"]
 +++
 
-For context: <https://www.reddit.com/r/AppImage/comments/1hk4xpg/why_are_appimages_not_popular>
+> For context: <https://www.reddit.com/r/AppImage/comments/1hk4xpg/why_are_appimages_not_popular>
 
 The problem is very simple: the design of appimage was developed in the mid-2000s and has remained there. It uses outdated logic where there is a program that needs to be downloaded from the manufacturer's website, which you know in advance, then you need to download the program, grant permissions to run, move it to the desktop folder in the file manager and it will be integrated: the program will appear on the desktop, in the menu and wherever needed, instead of a modern user experience, where the user has a Software Center from where he downloads an application that is automatically integrated into the desktop (by copying the desktop file to the `/usr/share/applications` directory) and updates there when needed.
 AppImage has an appstream, although it is not entirely clear why it is needed if AppImage avoids Application Centers that use these files for show info about application
