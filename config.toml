@@ -8,6 +8,11 @@ title = "Dr. Sheppard's blog"
 # The default site author.
 author = "Dr. Sheppard"
 
+# No SASS - CSS is internal (located in base.html template).
+compile_sass = false
+# Search index enabled.
+build_search_index = true
+
 # The default language; used in feeds.
 default_language = "ru"
 
@@ -32,6 +37,23 @@ paths = "on"
 taxonomies = "on"
 # Controls slugification for heading anchors (H1 to H6 etc.).
 anchors = "on"
+
+[extra]
+
+# Responsive images
+image_format = "auto"
+image_quality = 100
+images_default_size = 1024
+images_sizes = [512, 1024, 2048]
+
+menu_links = [
+  { url = "$BASE_URL/", name = "Home" },
+  { url = "$BASE_URL/posts/", name = "Posts" },
+  { url = "$BASE_URL/about/", name = "About" },
+  { url = "$BASE_URL/projects/", name = "Projects" },
+  { url = "$BASE_URL/tags/", name = "Tags" },
+  { url = "$BASE_URL/search/", name = "Search" },
+]
 
 # The page footer options.
 [extra.footer]
