@@ -26,10 +26,6 @@ feed_filenames = ["rss.xml"]
 
 taxonomies = [{ name = "tags", rss = true, paginate_by = 5 }]
 
-[search]
-# Required for search page to work.
-index_format = "fuse_javascript"
-
 [slugify]
 # Controls slugification for page/section URLs.
 paths = "on"
@@ -49,9 +45,7 @@ images_sizes = [512, 1024, 2048]
 menu_links = [
   { url = "$BASE_URL/", name = "Home" },
   { url = "$BASE_URL/posts/", name = "Posts" },
-  { url = "$BASE_URL/about/", name = "About" },
   { url = "$BASE_URL/tags/", name = "Tags" },
-  { url = "$BASE_URL/search/", name = "Search" },
 ]
 
 # The page footer options.

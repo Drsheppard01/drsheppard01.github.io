@@ -1,32 +1,37 @@
 +++
-title = "Why are AppImages unpopular. Response comment to reddit post"
+title = "Почему AppImage не популярны. Ответ на пост от Reddit"
 date = "2025-02-12"
 description = "Cuz reddit comment doesn't accept it"
 [taxonomies]
 tags = ["Linux", "AppImage", "Flatpak", "Snap", "Containers", "Linux Desktop"]
 +++
 
-> For context: <https://www.reddit.com/r/AppImage/comments/1hk4xpg/why_are_appimages_not_popular>
 
-The problem is very simple: the design of appimage was developed in the mid-2000s and has remained there. It uses outdated logic where there is a program that needs to be downloaded from the manufacturer's website, which you know in advance, then you need to download the program, grant permissions to run, move it to the desktop folder in the file manager and it will be integrated: the program will appear on the desktop, in the menu and wherever needed, instead of a modern user experience, where the user has a Software Center from where he downloads an application that is automatically integrated into the desktop (by copying the desktop file to the `/usr/share/applications` directory) and updates there when needed.
-AppImage has an appstream, although it is not entirely clear why it is needed if AppImage avoids Application Centers that use these files for show info about application
-For various reasons, AppImage isolation tools were not supported (I think because they were not integrated into any build system, and the rules for appimage isolation also need to be written like scripts, that is, invent everything from scratch, but this is just my opinion, [Matthew Gordon](https://github.com/mgord9518) probably has a different opinion)
+> Для контекста: <https://www.reddit.com/r/AppImage/comments/1hk4xpg/why_are_appimages_not_popular>
 
-As we said, AppImage does not have its own Software Center because it is believed that AppImage does not need it, although when building an application, appimagetool offers you to add your application to the list on appimage.github.io where half of the applications are no longer used, a third of the supported ones do not have a download button and good data parsing, which is then packed into a json file and Software Centers like AppImagePool were used, but since appimage.github.io is poorly supported, they felt bad and quickly became archieved projects, or like Nitrux SC, for which AppImage is an important part now use AppImageHub.
 
-AppImage maintains compatibility with old build tools, and lazy developers (e.g. electron-builder where the code depends on the appimage-maker package that uses appbuilder-libs that has not been updated for 100500 years, in whose releases lies the old appimage-runtime, older than mammoths and almost the same age as t-rex) do not update scripts for years, as a result, a lump of problems accumulates, developers abandon AppImage and switch to Flatpak
+Проблема очень проста: дизайн AppImage был разработан в середине 2000-х годов и до сих пор остается таким. Он использует устаревшую логику, где есть программа, которую нужно загрузить с веб-сайта производителя, о чем вы знаете заранее, затем нужно загрузить программу, предоставить ей права на запуск, переместить ее в папку рабочего стола в файловом менеджере, и она будет интегрирована: программа появится на рабочем столе, в меню и везде, где это необходимо, вместо современного пользовательского интерфейса, где у пользователя есть Центр программного обеспечения, откуда он загружает приложение, которое автоматически интегрируется в рабочий стол (путем копирования файла с рабочего стола в каталог `/usr/share/applications`) и обновляется там по мере необходимости.
 
-To summarize all of the above, for AppImage to become popular, need make next steps:
+AppImage имеет AppStream, хотя не совсем ясно, зачем он нужен, если AppImage избегает использования центров приложений, которые применяют эти файлы для отображения информации о приложении.
+По разным причинам инструменты изоляции AppImage не поддерживались (я думаю, потому что они не были интегрированы ни в одну систему сборки, а правила изоляции AppImage также нужно было писать как скрипты, то есть изобретать все с нуля, но это всего лишь мое мнение, у [Мэтью Гордона](https://github.com/mgord9518), вероятно, другое мнение).
 
-1. Native integration into the desktop
-2. A reliable build infrastructure, for example, on recipes, with multiple build parameters like repackaging, builds from scratch and more features (by the way, the closest competitor has this part developed best)
-3. Update all important existing build infrastructures like electron-builder (it is unlikely that this will happen, but then you need to invest in forks like Reforged), switch to using a static runtime, which will solve a billion problems users (almost a panacea, I even have gimp running on musl without any problems!)
-4. Software Center or plugins to existing ones, because Linux users are used to getting applications from there, rather than going to the manufacturer's website
+Как мы уже говорили, у AppImage нет собственного центра программного обеспечения, потому что считается, что AppImage в нем не нуждается, хотя при сборке приложения appimagetool предлагает добавить ваше приложение в список на appimage.github.io, где половина приложений больше не используется, треть поддерживаемых не имеет кнопки загрузки и хорошего анализа данных, которые затем упаковываются в файл JSON, и использовались центры программного обеспечения, такие как AppImagePool, но поскольку appimage.github.io плохо поддерживается, они быстро стали работать неэффективно. стали архивными проектами, или, как в случае с Nitrux SC, для которого AppImage является важной частью, теперь используют AppImageHub.
 
-But wait, why are we talking about AppImage? It's simple: it's the BEST thing that's ever happened to Linux packaging (maybe except makeself+mojosetup which helps games and some programs like DaVinci Resolve)
+AppImage поддерживает совместимость со старыми инструментами сборки, а ленивые разработчики (например, electron-builder, код которого зависит от пакета appimage-maker, использующего библиотеки appbuilder, которые не обновлялись 100500 лет, и в релизах которого используется старая среда выполнения appimage, старше мамонтов и почти того же возраста, что и тираннозавр) годами не обновляют скрипты, в результате чего накапливается множество проблем, разработчики отказываются от AppImage и переходят на Flatpak.
 
-Flatpak is anything but a method of packaging an application, the closest description is something like a way to deploy another Linux distribution inside yours with a GUI and good promotion, and at the same time eat up your entire disk
+Подводя итог всему вышесказанному, для того чтобы AppImage стал популярным, необходимо предпринять следующие шаги:
 
-Snap is a mix of AppImage and Flatpak - it's not one separate git-like file system (like in flatpak) but squashfs, only one with a full distribution, and the second, which your application depends on, everything would be fine but it's mounted at system startup and not on click, so your good computer will turn on for about a minute while it mounts your snap packages. The isolation system is tightly tied to apparmor (solus developers, if I remember correctly, said that in order to provide the same experience as on ubuntu, it is necessary to support about 60 patches for apparmor, which are not always updated with each kernel release) and works well only on ubuntu, and since the format is closed, few users will dare to drag into their system something that is not isolated, it is unclear how it was assembled and who did it
+1. Нативная интеграция в настольную версию.
+2. Надежная инфраструктура сборки, например, на основе рецептов, с множеством параметров сборки, таких как перепаковка, сборка с нуля и другие функции (кстати, ближайший конкурент лучше всего разработал эту часть).
+3. Обновление всех важных существующих инфраструктур сборки, таких как electron-builder (маловероятно, что это произойдет, но тогда нужно будет инвестировать в форки, такие как Reforged), переход на использование статической среды выполнения, что решит миллиард проблем. проблемы пользователей (почти панацея, у меня даже GIMP работает на musl без проблем!)
+4. Центр программного обеспечения или плагины к существующим, потому что пользователи Linux привыкли получать приложения оттуда, а не заходить на веб-сайт производителя.
 
-That's basically it. In conclusion, I want to thank all those who are trying to promote and improve AppImage, you are doing an incredibly great job. I could try to call you by name, but your happiness is growing every day. Almost every day I see new projects on appimage and it makes me very happy
+Но подождите, почему мы говорим об AppImage? Всё просто: это ЛУЧШЕЕ, что когда-либо случалось с упаковкой Linux (возможно, за исключением makeself+mojosetup, который помогает играм и некоторым программам, таким как DaVinci Resolve).
+
+Flatpak — это отнюдь не метод упаковки приложения, наиболее близкое описание — это способ развернуть другой дистрибутив Linux внутри вашего с графическим интерфейсом и хорошим продвижением, и в то же время занять весь ваш диск.
+
+Snap — это смесь AppImage и Flatpak — это не отдельная файловая система, подобная Git (как в Flatpak), а squashfs, только одна с полным дистрибутивом, а вторая, от которой зависит ваше приложение. Всё было бы хорошо, но она монтируется при запуске системы, а не по щелчку мыши, поэтому ваш хороший компьютер будет включен около минуты, пока он монтирует ваши пакеты snap. Система изоляции тесно связана с AppArmor (разработчики, если я правильно помню, говорили, что для обеспечения того же уровня функциональности, что и в Ubuntu, необходимо поддерживать около 60 патчей для AppArmor, которые не всегда обновляются с каждым релизом ядра) и хорошо работает только в Ubuntu, а поскольку формат закрытый, немногие пользователи осмелятся установить в свою систему что-то неизолированное, непонятно, как это было собрано и кто это сделал.
+
+В общем, вот и всё. В заключение хочу поблагодарить всех, кто пытается продвигать и улучшать AppImage, вы делаете невероятно большую работу. Я мог бы попытаться назвать вас по имени, но ваша радость растёт с каждым днём. Почти каждый день я вижу новые проекты на AppImage, и это меня очень радует.
+
+This article is available in English: /response.en
