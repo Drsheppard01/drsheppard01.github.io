@@ -31,4 +31,4 @@ Snap is a mix of AppImage and Flatpak - it's not one separate git-like file syst
 
 That's basically it. In conclusion, I want to thank all those who are trying to promote and improve AppImage, you are doing an incredibly great job. I could try to call you by name, but your happiness is growing every day. Almost every day I see new projects on appimage and it makes me very happy
 
-Эта статья доступна также на русском: /response
+Эта статья доступна также на русском: <https://drsheppard01.github.io/posts/response/>
