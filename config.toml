@@ -48,6 +48,11 @@ menu_links = [
   { url = "$BASE_URL/tags/", name = "Tags" },
 ]
 
+socials = [
+    { name = "Bluesky", url = "https://bsky.app/profile/drsheppard01.bsky.social", icon = "bluesky" },
+    { name = "Mastodon", url = "https://social.linux.pizza/@drsheppard/", icon = "mastodon" },
+]
+
 # The page footer options.
 [extra.footer]
 since = 2024
