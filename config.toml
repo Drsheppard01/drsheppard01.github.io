@@ -40,6 +40,11 @@ socials = [
     { name = "Bluesky", url = "https://bsky.app/profile/drsheppard01.bsky.social", icon = "bluesky" },
     { name = "Mastodon", url = "https://social.linux.pizza/@drsheppard/", icon = "mastodon" },
 ]
+
+stylesheets = [
+  "custom.css",
+]
+
 [extra.taxonomies]
 sort_by = "page_count"         # e.g. name, page_count
 reverse = true
