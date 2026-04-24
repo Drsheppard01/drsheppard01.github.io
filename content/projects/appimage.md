@@ -6,7 +6,7 @@ date = 2023-10-26
 
 [extra]
 github = "https://github.com/appimage-sig/appimages/"
-Web page = "https://appimage-sig.github.io/appimages/"
+"Web page" = "https://appimage-sig.github.io/appimages/"
 tags = ["AppImage", "Software Catalog"]
 +++
 
