@@ -1,6 +1,6 @@
 # The URL the site will be built for
 base_url = "https://drsheppard01.github.io/"
-theme = "austere"
+theme = "apollo"
 
 # The site title and description; used in feeds by default.
 title = "Dr. Sheppard's blog"
