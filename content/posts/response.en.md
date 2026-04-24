@@ -3,7 +3,7 @@ title = "Why are AppImages unpopular. Response comment to reddit post"
 date = "2025-02-12"
 description = "Cuz reddit comment doesn't accept it"
 [taxonomies]
-tags = ["Linux", "AppImage", "Flatpak", "Snap", "Containers", "Linux Desktop"]
+tags=["Linux", "AppImage", "Flatpak", "Snap", "Containers", "Linux Desktop"]
 +++
 
 > For context: <https://www.reddit.com/r/AppImage/comments/1hk4xpg/why_are_appimages_not_popular>

@@ -3,7 +3,7 @@ title = "Почему AppImage не популярны. Ответ на пост
 date = "2025-02-12"
 description = "Cuz reddit comment doesn't accept it"
 [taxonomies]
-tags = ["Linux", "AppImage", "Flatpak", "Snap", "Containers", "Linux Desktop"]
+tags=["Linux", "AppImage", "Flatpak", "Snap", "Containers", "Linux Desktop"]
 +++
 
 
