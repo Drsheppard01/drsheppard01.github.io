@@ -42,7 +42,7 @@ socials = [
 ]
 
 stylesheets = [
-  "custom.css",
+  "custom.css"
 ]
 
 [extra.taxonomies]
