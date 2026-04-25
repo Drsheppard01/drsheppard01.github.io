@@ -16,5 +16,5 @@ Mac Gaming — это крайне интересное явление: есть
 
 По сему вопрос, скорее риторический, а не легче ли портировать игры и клиенты для Linux если их аудитория больше, эта аудитория зачастую напрямую относится к IT-сфере и, по этой же причине, не уступает в деньгах поклонникам "яблочных систем"
 
-[^1]: https://store.steampowered.com/hwsurvey/
-[^2]: Белый список игр для Steam Deck, исходим из простой интенции, что любая игра, которая может запуститься на Steam Deck будет работать и для десктопного Linux https://www.protondb.com/explore?selectedFilters=whitelisted
+[^1]: <https://store.steampowered.com/hwsurvey/>
+[^2]: Белый список игр для Steam Deck, исходим из простой интенции, что любая игра, которая может запуститься на Steam Deck будет работать и для десктопного Linux <https://www.protondb.com/explore?selectedFilters=whitelisted>
