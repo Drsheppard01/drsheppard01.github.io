@@ -16,5 +16,5 @@ GOG is in a similar situation, the only difference being that they already have 
 
 Therefore, the question is more rhetorical: wouldn't it be easier to port games and clients to Linux if they have a larger audience? This audience is often directly involved in the IT industry and, for the same reason, is just as wealthy as Apple fans.
 
-[^1] https://store.steampowered.com/hwsurvey/
-[^2] Whitelist of games for the Steam Deck, we proceed from the simple intention that any game that can run on the Steam Deck will also work for desktop Linux https://www.protondb.com/explore?selectedFilters=whitelisted
+[^1]: https://store.steampowered.com/hwsurvey/
+[^2]: Whitelist of games for the Steam Deck, we proceed from the simple intention that any game that can run on the Steam Deck will also work for desktop Linux https://www.protondb.com/explore?selectedFilters=whitelisted
