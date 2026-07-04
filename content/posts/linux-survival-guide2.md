@@ -1,5 +1,5 @@
 +++
-title = "Linux Survival Guide. Оптимизация загрузки"
+title = "Linux Survival Guide #2 | Сила Терминала"
 date = "2022-01-20"
 description = "Как настроить терминал, чтобы получать удовольствие"
 [taxonomies]
