@@ -9,4 +9,4 @@ github = "https://github.com/Drsheppard01/heroic-themes"
 tags=["Heroic", "css"]
 +++
 
-Some themes for popular [Heroic Games Launcher] (https://heroicgameslauncher.com/)
+Some themes for popular [Heroic Games Launcher] (https://heroicgameslauncher.com/) (fork)
