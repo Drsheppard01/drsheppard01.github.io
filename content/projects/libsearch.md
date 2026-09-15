@@ -9,4 +9,4 @@ github = "https://github.com/Drsheppard01/libsearch"
 tags=["shell", "package manager"]
 +++
 
-Attempt to port Monokai theme from micro editor to Zed
+Funny script, with main target search libs using pacakge managers
