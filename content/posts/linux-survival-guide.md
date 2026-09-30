@@ -21,7 +21,7 @@ sudo apt-get install zsh
 Для Fedora:
 
 ```shell
-sudo apt-get install zsh
+sudo dnf install zsh
 ```
 
 Для Arch:
@@ -30,13 +30,13 @@ sudo apt-get install zsh
 sudo pacman -Suy zsh
 ```
 
-Сменить bash на zsh можно следующей командой:
+Меняем bash на zsh можно следующей командой:
 
 ```shell
 sudo chsh -s /bin/zsh $(whoami)
 ```
 
-Далее, установите плагин менеджеров, их бесчисленное множество, но я предпочитаю zim
+Далее, установим плагин менеджеров, их бесчисленное множество, но я предпочитаю zim
 
 Установка zim:
 
@@ -44,7 +44,7 @@ sudo chsh -s /bin/zsh $(whoami)
 curl -fsSL https://raw.githubusercontent.com/zimfw/install/master/install.zsh | zsh
 ```
 
-Установите micro - консольный редактор с привычными сочетаниями клавиш для быстрой работы
+Установим micro - консольный редактор с привычными сочетаниями клавиш для быстрой работы
 
 Для Debian/Ubuntu:
 
@@ -55,7 +55,7 @@ sudo apt-get install micro
 Для Fedora:
 
 ```shell
-sudo apt-get install micro
+sudo dnf install micro
 ```
 
 Для Arch:
@@ -65,6 +65,8 @@ sudo pacman -Suy micro
 ```
 
 Я также ставлю fastfetch - консольная информация о системе, bottom - консольный менеджер ресурсов, gdu - анализ использования дисков
+
+Мои конфиги можно увидеть здесь: <https://github.com/Drsheppard01/blenderfruitos/tree/main/.config>
 
 # Стероиды для гномов
 
@@ -84,9 +86,10 @@ sudo pacman -Suy micro
 
 Для внешнего вида я использую: 
 
-Тему GTK: <https://github.com/vinceliuice/Colloid-gtk-theme> Colloid-Yellow-Light-Nord
-Тему иконок: <https://github.com/darkomarko42/Marwaita-Icons> Marwaita
-Шрифт: <https://fonts.google.com/specimen/Geist> Geist
+- Тема GTK: <https://github.com/vinceliuice/Colloid-gtk-theme> Colloid-Yellow-Light-Nord  
+- Тема иконок: <https://github.com/darkomarko42/Marwaita-Icons> Marwaita  
+- Шрифт системный: <https://fonts.google.com/specimen/Geist> Geist  
+- Шрифт для терминала: <https://www.programmingfonts.org/#iosevka> Iosevka (скачать с [nerdfonts](<https://github.com/ryanoasis/nerd-fonts/releases/download/v3.5.1/Iosevka.zip>))
 
 # Чистим хвосты
 
@@ -125,5 +128,5 @@ sudo dnf autoremove ## обычно включён по умолчанию
 Для Arch:
 
 ```shell
-sudo pacman -Qdttq | pacman -Rs -
+sudo pacman -Rsn $(pacman -Qtdq)"
 ```
