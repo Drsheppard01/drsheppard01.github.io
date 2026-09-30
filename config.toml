@@ -39,6 +39,7 @@ menu = [
 socials = [
     { name = "Bluesky", url = "https://bsky.app/profile/drsheppard01.bsky.social", icon = "bluesky" },
     { name = "Mastodon", url = "https://social.linux.pizza/@drsheppard/", icon = "mastodon" },
+    { name = "Mail" usrl = "mailto://gbog@proton.me", icon = "mail" }
 ]
 
 stylesheets = [
