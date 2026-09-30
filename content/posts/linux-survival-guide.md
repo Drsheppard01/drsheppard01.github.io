@@ -1,6 +1,6 @@
 +++
 title = "Linux Survival Guide"
-date = "2022-01-19"
+date = "2026-09-29"
 description = "Как оптимизировать Linux, чтобы получать удовольствие"
 [taxonomies]
 tags=["Linux", "optimization", "Linux Desktop"]
